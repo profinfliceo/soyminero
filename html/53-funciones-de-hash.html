@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-muminaux-mq486385a">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<title>5.3. Funciones de HASH | ¡Soy minerooo...!</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="REA de la asignatura de Creación Digital y Pensamiento Computacional para 1º de BACHILLERATO sobre ciberseguridad">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/udl-content/udl-content.js"></script><link rel="stylesheet" href="../idevices/udl-content/udl-content.css">
+<script src="../libs/exe_effects/exe_effects.js"> </script>
+<link rel="stylesheet" href="../libs/exe_effects/exe_effects.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-muminaux-mq486385a" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">¡Soy minerooo...!</a>
+</li>
+<li> <a href="../html/1-que-vamos-a-hacer.html" class="no-ch">1. ¿Qué vamos a hacer?</a>
+</li>
+<li> <a href="../html/2-nos-encriptamos.html" class="no-ch">2. Nos encriptamos</a>
+</li>
+<li> <a href="../html/3-explorando-tus-habilidades.html" class="no-ch">3. Explorando tus habilidades</a>
+</li>
+<li> <a href="../html/4-un-poco-de-historia.html" class="daddy">4 Un poco de historia</a>
+<ul class="other-section">
+<li> <a href="../html/41-la-escitala-griega.html" class="no-ch">4.1. La escítala griega.</a>
+</li>
+<li> <a href="../html/41-el-cifrado-cesar.html" class="no-ch">4.1. El cifrado César</a>
+</li>
+<li> <a href="../html/42-cifrado-de-vigenere.html" class="no-ch">4.2. Cifrado de Vigenére</a>
+</li>
+<li> <a href="../html/43-la-maquina-enigma.html" class="no-ch">4.3. La máquina enigma</a>
+</li>
+</ul>
+</li>
+<li class="current-page-parent"> <a href="../html/5-criptografia-avanzada.html" class="daddy">5. Criptografía avanzada</a>
+<ul class="other-section">
+<li> <a href="../html/51-criptografia-simetrica.html" class="no-ch">5.1. Criptografía simétrica</a>
+</li>
+<li> <a href="../html/52-criptografia-asimetrica.html" class="no-ch">5.2. Criptografía asimétrica</a>
+</li>
+<li class="active"> <a href="../html/53-funciones-de-hash.html" class="active no-ch">5.3. Funciones de HASH</a>
+</li>
+<li> <a href="../html/54-esteganografia-y-estegoanalisis.html" class="no-ch">5.4 Esteganografía y estegoanálisis</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/6-blockchain.html" class="daddy">6. Blockchain</a>
+<ul class="other-section">
+<li> <a href="../html/61-criptomonedas.html" class="no-ch">6.1 Criptomonedas</a>
+</li>
+<li> <a href="../html/62-nfts-y-mucho-mas.html" class="no-ch">6.2. NFTs y mucho más.</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/7-creamos-nuestro-blockchain.html" class="no-ch">7. Creamos nuestro Blockchain</a>
+</li>
+<li> <a href="../html/8-presenta-tu-trabajo.html" class="no-ch">8. Presenta tu trabajo</a>
+</li>
+<li> <a href="../html/9-sacamos-conclusiones.html" class="no-ch">9. Sacamos conclusiones</a>
+</li>
+<li> <a href="../html/creditos.html" class="no-ch">Créditos</a>
+</li>
+</ul>
+</nav><main id="page-muminaux-mq486385a" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">13</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">21</strong></span></p>
+
+<div class="package-header"><p class="package-title">¡Soy minerooo...!</p></div>
+<div class="page-header"><h1 class="page-title">5.3. Funciones de HASH</h1></div>
+</header><div id="page-content-page-muminaux-mq486385a" class="page-content">
+<article id="block-muminav6-lpqdx5u71" class="box">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/udl_rep_reproduccion.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title"> 1. ¿Qué son y para qué sirven las funciones HASH?</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-muminav6-pnb43iy5v" class="idevice_node udl-content" data-idevice-path="../idevices/udl-content/" data-idevice-type="udl-content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><span style="font-size: 16.8px;">Un <em><strong>hash</strong></em> (o hash criptográfico) es un número largo que actúa como una&nbsp;<strong>huella digital</strong>&nbsp;de cualquier colección de datos. En Bitcoin se usa la función de hashing&nbsp;<strong>SHA256</strong>&nbsp;que <strong>genera un número hexadecimal de 64 dígitos ( 64 x 4 bits = 256 bits)</strong>.&nbsp;</span>La<span style="font-size: 1.05em;">s funciones hash son muy empleadas en criptografía y tienen una serie de características que las definen.</span></p>
+<p>Te propongo que visualices el siguiente vídeo y que realices un resumen atendiendo a los siguientes puntos:</p>
+<ul>
+<li>Definición.</li>
+<li>Características.</li>
+<li>¿Por que se usan?</li>
+<li>Aplicaciones.</li>
+<li>Propiedades.</li>
+</ul>
+<p>Es importante saber que una función hash <strong>no genera un mensaje cifrado</strong> sino un<strong> clave única</strong> que depende del archivo original, pero no lo contiene.</p>
+<p>Cualquier cambio en el archivo original, generalmente texto o imagen, produce un hash totalmente diferente.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: center;"><iframe src="https://www.youtube.com/embed/FRBIc0udwv0" allowfullscreen="allowfullscreen" width="560" height="314" referrerpolicy="strict-origin-when-cross-origin"></iframe></p></div></div></section></div>
+</div>
+</div>
+</article><article id="block-muminav6-c6qboxmao" class="box">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/udl_exp_competenciadigital.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">2. Algoritmos de Hash</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-muminav6-rdfbytom0" class="idevice_node udl-content" data-idevice-path="../idevices/udl-content/" data-idevice-type="udl-content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Una función criptográfica hash es un algoritmo matemático que transforma cualquier dato entrante en una serie de caracteres formando&nbsp;una sucesión alfanumérica (letras y números) hexadecimal, con una longitud normalmente fija que constituye una especie de resumen del mensaje.</p>
+<h4 style="text-align: center;">Tipos de algoritmos de hash más utilizados</h4>
+<div class="exe-fx exe-tabs">
+<h2>MD5</h2>
+<p style="text-align: justify;">MD5&nbsp;es una función hash popular y ampliamente usada,&nbsp;diseñada a principios de la década de 1990 como una función hash criptográfica.&nbsp;Trabaja con bloques de<strong> 512 bits</strong> y genera resúmenes de hash de <strong>128 bits </strong>(128/4 = 32 caracteres hexadecimales).&nbsp;MD5 fue publicada en 1992,&nbsp;y aunque durante estos años fue usada y adoptada en forma generalizada,&nbsp;se han descubierto varias vulnerabilidades&nbsp;durante los últimos años por lo que actualmente se recomienda usar algoritmos más seguros.</p>
+<p style="text-align: justify;">Md5sum&nbsp;es un programa de hash que calcula y verifica los hashes MD5 de 128 bits. Se utiliza principalmente para verificar la integridad de los archivos. Para ello se envía junto con el archivo el&nbsp;Md5sum obtenido antes del envío y el receptor aplica de nuevo el algoritmo del archivo enviado para comprobar que su&nbsp;Md5sum no ha cambiado por pérdida o modificación de su contenido.</p>
+<h2>SHA-1</h2>
+<p style="text-align: justify;">Secure Hash Algorithm (SHA) . Los&nbsp;algoritmos de hash seguro​ son una familia de&nbsp;funciones de hash criptográficas&nbsp;publicadas por el&nbsp;Instituto Nacional de Estándares y Tecnología&nbsp;(NIST) como un estándar federal de procesamiento de información (FIPS) de EE. UU; que incluyen:&nbsp;SHA-1,&nbsp;SHA-2 y&nbsp;SHA-3</p>
+<p>SHA-1 trabaja con bloques de <strong>512 bits</strong> y genera un resumen hash de <strong>160 bits</strong>.&nbsp;Se utiliza en protocolos como TLS/SSL,&nbsp;PGP SSH y en IPsec.</p>
+<p style="text-align: justify;">Fue diseñado por la Agencia de Seguridad Nacional (NSA) para ser parte de&nbsp;Digital Signature Algorithm. Se descubrieron debilidades criptográficas en SHA-1, y el estándar ya no fue aprobado para la mayoría de los usos criptográficos después de 2010.<br><br></p>
+<h2>SHA-2</h2>
+<p style="text-align: justify;">Se compone de una familia de dos funciones hash similares, con diferentes tamaños de bloque, conocidas como&nbsp;SHA-256&nbsp;y&nbsp;SHA-512&nbsp;. Se diferencian por el tamaño de las palabras; SHA-256 usa palabras de<strong> 32 bytes&nbsp;</strong>(256/8) donde SHA-512 usa palabras de<strong> 64 bytes&nbsp;</strong>(512/8). De&nbsp;SHA-2, también hay versiones truncadas de cada estándar, conocidas como&nbsp;SHA-224&nbsp;,&nbsp;SHA-384&nbsp;,&nbsp;SHA-512/224&nbsp;y&nbsp;SHA-512/256&nbsp;. Estos también fueron diseñados por la NSA.</p>
+<ul>
+<li>Las funciones hash SHA-2 están implementadas en una gran variedad de aplicaciones y protocolos de seguridad, como por ejemplo:&nbsp;TLS&nbsp;y&nbsp;SSL,&nbsp;PGP,&nbsp;SSH,&nbsp;S/MIME, PPCoin&nbsp;y&nbsp;IPsec.</li>
+<li>La&nbsp;moneda criptográfica&nbsp;<strong>Bitcoin&nbsp;</strong>depende en gran medida en un doble uso del SHA-256.</li>
+<li>A finales de 2013, los mejores ataques públicos consiguieron romper las 46 de las 64 iteraciones del SHA-256​ y 46 de las 80 iteraciones del SHA-512</li>
+</ul>
+<h2>SHA-3</h2>
+<p style="text-align: justify;">Es una función hash anteriormente llamada&nbsp;Keccak&nbsp;, elegida en 2012 después de una competencia pública entre diseñadores que no pertenecen a la NSA. Admite las mismas longitudes de hash que SHA-2 y su estructura interna difiere significativamente del resto de la familia SHA.</p>
+<p style="text-align: justify;">SHA-3 es muy diferente al actual SHA-2, sin embargo el NIST afirma que este nuevo algoritmo&nbsp;no pretende sustituir&nbsp;de momento al actual SHA-2, quien no ha demostrado por el momento ninguna vulnerabilidad, sino que simplemente pretende ser un salvoconducto por si ocurre algo con el estándar actual. Los investigadores de seguridad afirman que se tardan años en crear un nuevo estándar, y por ello han querido estar preparados para el futuro desarrollando y estandarizando este nuevo algoritmo que, sin duda, protegerá de la mejor forma posible la información de los usuarios.</p>
+</div>
+<p style="text-align: center;"><strong>Aspecto de diferentes algoritmos de hash</strong></p>
+<p><img src="../content/resources/hash.PNG" alt="Hash" title="Hash" width="601" height="289" style="display: block; margin-left: auto; margin-right: auto;"></p></div></div></section></div>
+</div>
+</div>
+</article><article id="block-muminav6-hagu2sy1a" class="box">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/udl_exp_tareagrupal.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">3. Utilizamos MD5Sum</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-muminav6-2jikutu6z" class="idevice_node udl-content" data-idevice-path="../idevices/udl-content/" data-idevice-type="udl-content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><h2>Vamos a comprobar la integridad de un archivo mediante el uso de MD5</h2>
+<ol>
+<li>Crea un archivo de texto plano "prueba.txt" que contenga una frase cualquiera, por ejemplo tu nombre "Juan Rodríguez".</li>
+<li>Mediante un generador online de los muchos que hay,&nbsp; obtén su MD5.</li>
+<li>Envía por correo a un compañero o compañera tres archivos:</li>
+</ol>
+<ul>
+<li>El "prueba.txt" original</li>
+<li>Un archivo "MD5.txt" con el código obtenido.</li>
+<li>Un archivo&nbsp; "prueba-modificado.txt" idéntico al original pero en el que se ha cambiado un carácter, por ejemplo tu nombre "Juan Rodrígues".</li>
+</ul>
+<p>Ahora tu compañero o compañera tiene que calcular los MD5 tanto de&nbsp;"prueba.txt", como de&nbsp;"prueba-modificado.txt" y comparar el resultado con el código enviado en&nbsp; "MD5.txt".</p>
+<ul>
+<li>¿Qué ha ocurrido?</li>
+<li>¿Qué conclusión sacas?</li>
+</ul></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2><span class="sr-av">Lumen dice </span>Un poco de ayuda</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Es conveniente que emisor y receptor utilicen páginas distintas para obtener el MD5.</p>
+<p>Puedes utilizar alguna de estas páginas:</p>
+<ul>
+<li><a href="https://md5file.com/calculator" target="_blank" title="Accede a https://md5file.com/calculator" rel="noopener">https://md5file.com/calculator</a></li>
+<li><a href="https://hash.online-convert.com/es" target="_blank" title="Accede a https://hash.online-convert.com/es" rel="noopener">https://hash.online-convert.com/es</a></li>
+<li><a href="https://es.rakko.tools/tools/10/" title="Accede a https://es.rakko.tools/tools/10/">https://es.rakko.tools/tools/10/</a></li>
+<li><a href="https://www.infranetworking.com/md5" title="Accede a https://es.rakko.tools/tools/10/">https://www.infranetworking.com/md5</a></li>
+<li><a href="https://www.md5hashgenerator.com/" title="Accede a https://www.md5hashgenerator.com/">https://www.md5hashgenerator.com/</a></li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/52-criptografia-asimetrica.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/54-esteganografia-y-estegoanalisis.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-nc-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="license">Creative Commons: Reconocimiento - no comercial - compartir igual 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

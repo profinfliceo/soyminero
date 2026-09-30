@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-muminaux-qo5az7rk1">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<title>4.2. Cifrado de Vigenére | ¡Soy minerooo...!</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="REA de la asignatura de Creación Digital y Pensamiento Computacional para 1º de BACHILLERATO sobre ciberseguridad">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/udl-content/udl-content.js"></script><link rel="stylesheet" href="../idevices/udl-content/udl-content.css">
+<script src="../libs/exe_effects/exe_effects.js"> </script>
+<link rel="stylesheet" href="../libs/exe_effects/exe_effects.css">
+<script src="../libs/exe_lightbox/exe_lightbox.js"> </script>
+<link rel="stylesheet" href="../libs/exe_lightbox/exe_lightbox.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-muminaux-qo5az7rk1" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">¡Soy minerooo...!</a>
+</li>
+<li> <a href="../html/1-que-vamos-a-hacer.html" class="no-ch">1. ¿Qué vamos a hacer?</a>
+</li>
+<li> <a href="../html/2-nos-encriptamos.html" class="no-ch">2. Nos encriptamos</a>
+</li>
+<li> <a href="../html/3-explorando-tus-habilidades.html" class="no-ch">3. Explorando tus habilidades</a>
+</li>
+<li class="current-page-parent"> <a href="../html/4-un-poco-de-historia.html" class="daddy">4 Un poco de historia</a>
+<ul class="other-section">
+<li> <a href="../html/41-la-escitala-griega.html" class="no-ch">4.1. La escítala griega.</a>
+</li>
+<li> <a href="../html/41-el-cifrado-cesar.html" class="no-ch">4.1. El cifrado César</a>
+</li>
+<li class="active"> <a href="../html/42-cifrado-de-vigenere.html" class="active no-ch">4.2. Cifrado de Vigenére</a>
+</li>
+<li> <a href="../html/43-la-maquina-enigma.html" class="no-ch">4.3. La máquina enigma</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/5-criptografia-avanzada.html" class="daddy">5. Criptografía avanzada</a>
+<ul class="other-section">
+<li> <a href="../html/51-criptografia-simetrica.html" class="no-ch">5.1. Criptografía simétrica</a>
+</li>
+<li> <a href="../html/52-criptografia-asimetrica.html" class="no-ch">5.2. Criptografía asimétrica</a>
+</li>
+<li> <a href="../html/53-funciones-de-hash.html" class="no-ch">5.3. Funciones de HASH</a>
+</li>
+<li> <a href="../html/54-esteganografia-y-estegoanalisis.html" class="no-ch">5.4 Esteganografía y estegoanálisis</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/6-blockchain.html" class="daddy">6. Blockchain</a>
+<ul class="other-section">
+<li> <a href="../html/61-criptomonedas.html" class="no-ch">6.1 Criptomonedas</a>
+</li>
+<li> <a href="../html/62-nfts-y-mucho-mas.html" class="no-ch">6.2. NFTs y mucho más.</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/7-creamos-nuestro-blockchain.html" class="no-ch">7. Creamos nuestro Blockchain</a>
+</li>
+<li> <a href="../html/8-presenta-tu-trabajo.html" class="no-ch">8. Presenta tu trabajo</a>
+</li>
+<li> <a href="../html/9-sacamos-conclusiones.html" class="no-ch">9. Sacamos conclusiones</a>
+</li>
+<li> <a href="../html/creditos.html" class="no-ch">Créditos</a>
+</li>
+</ul>
+</nav><main id="page-muminaux-qo5az7rk1" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">8</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">21</strong></span></p>
+
+<div class="package-header"><p class="package-title">¡Soy minerooo...!</p></div>
+<div class="page-header"><h1 class="page-title">4.2. Cifrado de Vigenére</h1></div>
+</header><div id="page-content-page-muminaux-qo5az7rk1" class="page-content">
+<article id="block-muminav4-pc89uijdv" class="box">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/udl_exp_escribe.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">1. Un método mejor.</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-muminav4-vpvn1uohf" class="idevice_node udl-content" data-idevice-path="../idevices/udl-content/" data-idevice-type="udl-content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El algoritmo del cifrado César es muy simple (<strong>mono</strong><strong>alfabético)</strong>. El <strong>cifrado</strong> <strong>de</strong> <strong>Vigenére</strong> consiste en la secuencia del cifrado de César con transformaciones diferentes para cada letra (<strong>polialfabético</strong>).</p>
+<p>En la siguiente tabla la primera fila representa el número de desplazamientos o rotaciones que se hace al abecedario y las siguientes filas son el resultado de ese número de rotaciones:</p>
+<p><a href="../content/resources/Cuadro_Vigenere.png" rel="lightbox"><img src="../content/resources/Cuadro_Vigenere.png" alt="Cuadro Vigenere" title="Cuadro Vigenere" style="display: block; margin-left: auto; margin-right: auto;" width="500" hspace="auto" height="520"></a></p>
+<figure class="exe-figure exe-image position-center" style="width: 500px; text-align: center;">
+<figcaption class="figcaption"><span class="title"><em>Clic para aumentar</em></span></figcaption>
+</figure>
+<p>Por ejemplo, la primera letra del abecedario aplicando 10 rotaciones (ROT10) es la K, por tanto la A se sustituye por la K.</p>
+<p>Ahora podemos elegir una palabra para aplicar esas rotaciones de forma repetida.</p>
+<p>Intenta realizarlo ahora con&nbsp; la palabra LIMON como clave que define la secuencia de las letras L, I, M, O&nbsp; y N, es decir,&nbsp; ROT11-ROT8-ROT12-ROT15-ROT13, la cual se repite hasta que todo el bloque de texto sea transformado.</p>
+<p><strong>Actividad:</strong>&nbsp;utilizando la tabla anterior, realiza una encriptación de la frase "BUENAS NOCHES" tomando como clave de rotación las letras de la palabra "LIMON".</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2><span class="sr-av">Lumen dice </span>¿Necesitas ayuda?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La palabra LIMON,&nbsp; define la secuencia&nbsp; ROT11-ROT8-ROT12-ROT15-ROT13, la cual se repite hasta que todo el bloque de texto sea transformado.</p>
+<table class="exe-table" style="width: 166.508%; height: 118px;" height="34" border="1">
+<tbody>
+<tr>
+<td style="width: 5%; text-align: center;"><strong>Mensaje</strong></td>
+<td style="width: 5.06592%; text-align: center;">B</td>
+<td style="width: 9.93408%; text-align: center;">U</td>
+<td style="width: 10%; text-align: center;">E</td>
+<td style="width: 10%; text-align: center;">N</td>
+<td style="width: 10%; text-align: center;">A</td>
+<td style="width: 7.61067%; text-align: center;">S</td>
+<td style="width: 7.38933%; text-align: center;">N</td>
+<td style="width: 7.72985%; text-align: center;">O</td>
+<td style="width: 8.18383%; text-align: center;">C</td>
+<td style="width: 6.33495%; text-align: center;">H</td>
+<td style="width: 6.09788%; text-align: center;">E</td>
+<td style="width: 5.6262%; text-align: center;">S</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 5%; text-align: center;"><strong>Clave</strong></td>
+<td style="width: 5.06592%; height: 23px; text-align: center;">L</td>
+<td style="width: 9.93408%; height: 23px; text-align: center;">I</td>
+<td style="width: 10%; height: 23px; text-align: center;">M</td>
+<td style="width: 10%; height: 23px; text-align: center;">O</td>
+<td style="width: 10%; height: 23px; text-align: center;">N</td>
+<td style="width: 7.61067%; height: 23px; text-align: center;">L</td>
+<td style="width: 7.38933%; height: 23px; text-align: center;">I</td>
+<td style="width: 7.72985%; height: 23px; text-align: center;">M</td>
+<td style="width: 8.18383%; height: 23px; text-align: center;">O</td>
+<td style="width: 6.33495%; height: 23px; text-align: center;">N</td>
+<td style="width: 6.09788%; text-align: center;">L</td>
+<td style="width: 5.6262%; text-align: center;">I</td>
+</tr>
+<tr>
+<td style="width: 5%; text-align: center;"><strong>Resultado</strong></td>
+<td style="width: 5.06592%; text-align: center;">M</td>
+<td style="width: 9.93408%; text-align: center;">C</td>
+<td style="width: 10%; text-align: center;">Q</td>
+<td style="width: 10%; text-align: center;">B</td>
+<td style="width: 10%; text-align: center;">N</td>
+<td style="width: 7.61067%; text-align: center;">D</td>
+<td style="width: 7.38933%; text-align: center;">V</td>
+<td style="width: 7.72985%; text-align: center;">..</td>
+<td style="width: 8.18383%; text-align: center;">..</td>
+<td style="width: 6.33495%; text-align: center;">..</td>
+<td style="width: 6.09788%; text-align: center;">..</td>
+<td style="width: 5.6262%; text-align: center;">..</td>
+</tr>
+</tbody>
+</table>
+<table class="exe-table" style="width: 847px; height: 115px;" height="437"><caption></caption>
+<tbody>
+<tr style="height: 23px;">
+<th style="width: 79.2969px; text-align: center; height: 23px;">Letra</th>
+<td style="width: 220.641px; text-align: center; height: 23px;">ROTACIÓN --> LIMON</td>
+<td style="width: 442.281px; text-align: center; height: 23px;">Resultado</td>
+</tr>
+<tr style="height: 23px;">
+<th style="width: 79.2969px; text-align: center; height: 23px;">B</th>
+<td style="width: 220.641px; text-align: center; height: 23px;"><span style="font-size: 12pt;">ROT11 -->en fila que comienza con la L...</span></td>
+<td style="width: 442.281px; text-align: center; height: 23px;"><span style="font-size: 12pt;">...el lugar de la B lo ocupa la M</span></td>
+</tr>
+<tr style="height: 23px;">
+<th style="width: 79.2969px; text-align: center; height: 23px;">u</th>
+<td style="width: 220.641px; text-align: center; height: 23px;"><span style="font-size: 12pt;">ROT8 --> en fila que comienza con la I...</span></td>
+<td style="width: 442.281px; text-align: center; height: 23px;"><span style="font-size: 12pt;">...el lugar de la U lo ocupa la C</span></td>
+</tr>
+<tr style="height: 23px;">
+<th style="width: 79.2969px; text-align: center; height: 23px;">e</th>
+<td style="width: 220.641px; text-align: center; height: 23px;"><span style="font-size: 12pt;">ROT12 -->en fila que comienza con la M...</span></td>
+<td style="width: 442.281px; text-align: center; height: 23px;"><span style="font-size: 12pt;">...el lugar de la E lo ocupa la Q</span></td>
+</tr>
+<tr style="height: 23px;">
+<th style="width: 79.2969px; text-align: center; height: 23px;">..</th>
+<td style="width: 220.641px; text-align: center; height: 23px;">..</td>
+<td style="width: 442.281px; text-align: center; height: 23px;">..</td>
+</tr>
+</tbody>
+</table>
+<p>Si necesitas más ayuda puede utilizar el siguiente convertidor online de <a href="http://roble.pntic.mec.es/jgad0020/cripto/vigenere.php" title="Accede al convertidor online de http://roble.pntic.mec.es" target="_blank" rel="noopener">http://roble.pntic.mec.es.</a></p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-1"><h2><span class="sr-av">Motus dice </span>Aprende de tus errores</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>¿Te has equivocado en algo al hacer la actividad?</p>
+<p>Cuando queremos aprender algo, lo normal es equivocarse al principio. Fallar forma parte de aprender. ¿Recuerdas cuando montaste en bici por primera vez? ¿o cuando intentabas nadar en el agua? Seguro que al principio no fue fácil, pero cada vez que fallabas, lo intentabas de nuevo. Con cada fallo aprendemos del error y lo mejoramos para la vez siguiente.</p>
+<ol>
+<li>Para aprender de tus errores sigue estos consejos:</li>
+<li>Me doy cuenta de en qué parte he fallado.</li>
+<li>Busco la forma de mejorar ese error.</li>
+<li>Lo intento de nuevo.</li>
+<li>Entiendo que el error es importante para aprender.</li>
+</ol>
+<p>No lo olvides: cuando te equivocas una vez, aprendes para el siguiente intento.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-2"><h2><span class="sr-av">kardia dice </span>Para saber más</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><h4><span style="color: #3366ff;">El cifrado Vigenère&nbsp;</span></h4>
+<div class="exe-fx exe-paginated">
+<h2>Duradero en el tiempo</h2>
+<p>El cifrado Vigenère se ha utilizado durante siglos y se ha reinventado muchas veces. El método original fue descrito por Giovan Battista Belasso en su libro de 1553 La cifra del Sig. Giovan Battista Belasso. Sin embargo, fue incorrectamente atribuido más tarde a Blaise de Vigenère, concretamente en el siglo XIX, y por ello aún se le conoce como el "cifrado Vigenère".</p>
+<h2>Utilizado por los ejércitos</h2>
+<p>Es lo suficientemente simple si se usa con discos de cifrado. Los estados confederados de América, por ejemplo, usaron un disco de cifrado para implementar el cifrado Vigenère durante la Guerra Civil Americana. Los mensajes confederados fueron poco secretos, ya que los miembros de la unión rompían habitualmente los mensajes.</p>
+<h2>No tan difícil de romper</h2>
+<p>Ganó una gran reputación por ser excepcionalmente robusto. Incluso el escritor y matemático Charles Lutwidge Dodgson (Lewis Carroll) dijo que el cifrado Vigenère era irrompible en el artículo "The Alphabet Cipher" para una revista de niños. En 1917, "Scientific American" describió el cifrado Vigenère como imposible de romper.</p>
+<p>Esta reputación fue mantenida, hasta que el&nbsp;método Kasiski&nbsp;rompió oficialmente el cifrado en el siglo XIX pero algunos criptoanalistas habilidosos afirmaron que lo habían roto mucho antes, pero lo mantenían en secreto para beneficiarse&nbsp; de esta ventaja respecto del enemigo.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/41-el-cifrado-cesar.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/43-la-maquina-enigma.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-nc-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="license">Creative Commons: Reconocimiento - no comercial - compartir igual 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>
